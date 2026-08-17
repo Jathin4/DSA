@@ -14,6 +14,7 @@ Space Complexity: O(k) — because the dictionary stores only the unique element
 """
 
 #Questions 
+#!.Check if an array is subset of another array
 class question1:
     def ques1(self,a,b):
         h = set(a)
@@ -26,7 +27,7 @@ a = [11, 1, 13, 21, 3, 7]
 b = [11, 3, 7, 1] 
 print(obj.ques1(a,b))
 
-
+#2. Frequency of each character in a String using Hashing
 class question2:
     def ques2(self,str):
         h = {}
@@ -36,3 +37,25 @@ class question2:
 obj = question2()
 str = "geeksforgeeks"
 print(obj.ques2(str))
+
+
+class question3:
+    def ques3(self, s):
+        h = {}
+
+        
+        for i in range(len(s)):
+            h[s[i]] = h.get(s[i], 0) + 1
+
+       
+        for i in range(len(s)):
+            if h[s[i]] == 1:
+                return s[i]
+
+        return "$"
+
+
+obj = question3()
+s = "geeksforgeeks"
+
+print(obj.ques3(s))
